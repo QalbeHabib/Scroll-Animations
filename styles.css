@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: rgb(209, 192, 161);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.h2 {
+  margin-top: 2rem;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(175, 159, 159);
+  width: 25rem;
+  height: 12rem;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid black;
+  box-shadow: inset 0 0 5px 1px rgb(110, 101, 101);
+  transform: translateX(1000%);
+  transition: transform 0.5s ease;
+}
+
+.box:nth-of-type(even) {
+  transform: translateX(-1000%);
+}
+.box.show {
+  transform: translateX(0);
+}
